@@ -1,0 +1,38 @@
+.preview {
+  position: relative;
+  z-index: -1;
+  margin-top: -10rem;
+  min-height: 50rem;
+
+  .container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 50rem;
+    object-fit: cover;
+    transform: translateX(-50%);
+
+    @media (max-width: em(1280)) {
+      height: 30rem;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    flex-grow: 1;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+    height: 100%;
+  }
+
+  @media (max-width: em(1280)) {
+    min-height: 30rem;
+  }
+}
